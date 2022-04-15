@@ -87,5 +87,23 @@ public class Main {
 
         System.out.println(car7);
         System.out.println(car8);
+
+        System.out.println("---------------------------------------");
+
+        SuperCarEngine engine3 = new SuperCarEngine("Petrol 3.0l");
+
+        SuperCar car9 = new SuperCar("Porsche", 450, engine3);
+        SuperCar car10 = new SuperCar(car9);
+
+        System.out.println(car9);
+        System.out.println(car10);
+        System.out.println();
+
+        car10.setBrand("Mercedes AMG");
+        car10.setHorsePower(580);
+        car10.getEngine().setName("Petrol 4.0l");
+
+        System.out.println(car9);
+        System.out.println(car10);
     }
 }
