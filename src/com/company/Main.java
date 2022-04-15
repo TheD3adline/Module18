@@ -69,5 +69,23 @@ public class Main {
 
         System.out.println(car5);
         System.out.println(car6);
+
+        System.out.println("---------------------------------------");
+
+        EvenBetterCarEngine engine2 = new EvenBetterCarEngine("Diesel 1.8l");
+
+        EvenBetterCar car7 = new EvenBetterCar("Audi", 250, engine2);
+        EvenBetterCar car8 = car7.clone();
+
+        System.out.println(car7);
+        System.out.println(car8);
+        System.out.println();
+
+        car8.setBrand("BMW");
+        car8.setHorsePower(280);
+        car8.getEngine().setName("Petrol 2.0l");
+
+        System.out.println(car7);
+        System.out.println(car8);
     }
 }

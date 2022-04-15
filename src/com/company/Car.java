@@ -20,7 +20,7 @@ public class Car implements Cloneable {
         try {
             return (Car) super.clone();
         } catch(CloneNotSupportedException e) {
-            System.out.println("Unexpected exception during clone process");
+            System.out.println("Unexpected problem during clone process Car.java");
         }
         return null;
     }

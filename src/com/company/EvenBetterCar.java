@@ -1,12 +1,12 @@
 package com.company;
 
-public class BetterCar implements Cloneable {
+public class EvenBetterCar implements Cloneable {
 
     private String brand;
     private int horsePower;
-    private BetterCarEngine engine;
+    private EvenBetterCarEngine engine;
 
-    public BetterCar(String brand, int horsePower, BetterCarEngine engine) {
+    public EvenBetterCar(String brand, int horsePower, EvenBetterCarEngine engine) {
         this.brand = brand;
         this.horsePower = horsePower;
         this.engine = engine;
@@ -18,11 +18,13 @@ public class BetterCar implements Cloneable {
     }
 
     @Override
-    public BetterCar clone() {
+    public EvenBetterCar clone() {
         try {
-            return (BetterCar) super.clone();
+            EvenBetterCar carCopy = (EvenBetterCar) super.clone();
+            carCopy.engine = (EvenBetterCarEngine) carCopy.engine.clone();
+            return carCopy;
         } catch(CloneNotSupportedException e) {
-            System.out.println("Unexpected problem during clone process of BetterCar.java");
+            System.out.println("Unexpected problem during clone process of EvenBetterCar.java");
         }
         return null;
     }
@@ -43,11 +45,11 @@ public class BetterCar implements Cloneable {
         this.horsePower = horsePower;
     }
 
-    public BetterCarEngine getEngine() {
+    public EvenBetterCarEngine getEngine() {
         return engine;
     }
 
-    public void setEngine(BetterCarEngine engine) {
+    public void setEngine(EvenBetterCarEngine engine) {
         this.engine = engine;
     }
 }
