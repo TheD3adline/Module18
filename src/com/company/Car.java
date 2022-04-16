@@ -1,6 +1,6 @@
 package com.company;
 
-public class Car implements Cloneable {
+public class Car implements Cloneable { //!!!!Cloneable interface needs to be implemented!!!!
 
     private String brand;
     private int horsePower;
@@ -16,7 +16,7 @@ public class Car implements Cloneable {
     }
 
     @Override
-    public Car clone() {
+    public Car clone() { //This is the overwritten clone() method that will allow this class to create a shallow copy of itself. !!!!Cloneable interface needs to be implemented!!!!
         try {
             return (Car) super.clone();
         } catch(CloneNotSupportedException e) {

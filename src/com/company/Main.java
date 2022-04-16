@@ -38,9 +38,9 @@ public class Main {
         System.out.println("---------------------------------------");
 
         Car car3 = new Car("Audi", 250); //To actually copy or clone complex data types there are 2 general concepts available. Here it is done via the clone() method
-        Car car4 = car3.clone();                        //passed on from Object.java class.
-                                                        //without all its lower classes that it may or may not access. If a copy is created with this, and the copied object also references
-        System.out.println(car3);                       //to a lower class, then both the car3 and car4 object will access the very same lower object, because the lower object has not been copied in the memory.
+        Car car4 = car3.clone();                        //passed on from Object.java class that needs to be @Overwrite and specified.
+                                                        //This example create only a "shallow copy" without all its lower classes that it may or may not access. If a copy is created with this, and the copied object also references
+        System.out.println(car3);                       //to a lower class, then both the car3 and car4 object will access the very same lower object, because the lower object has not had another copy created in the memory.
         System.out.println(car4);
         System.out.println();
 

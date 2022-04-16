@@ -12,13 +12,13 @@ public class SuperCar {
         this.engine = engine;
     }
 
-    //copy constructor
+    //This is the copy constructor, it is set up to accept a data type of its own class via overloading and then writes the values of all attributes into the newly instantiated object. !!!!Cloneable interface IS NOT required in this case!!!!
     public SuperCar(SuperCar other) {
-        //primitive attributes
+        //Primitive attributes are rather straightforward.
         this.brand = other.getBrand();
         this.horsePower = other.getHorsePower();
 
-        //complex attributes
+        //To copy complex attributes with this technique a new instance of it is created within the constructor of the parent class and then assigned to the variable.
         SuperCarEngine engineOther = new SuperCarEngine(other.getEngine().getName());
         this.engine = engineOther;
     }

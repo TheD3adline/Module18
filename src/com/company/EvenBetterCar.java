@@ -1,6 +1,6 @@
 package com.company;
 
-public class EvenBetterCar implements Cloneable {
+public class EvenBetterCar implements Cloneable { //!!!!Cloneable interface needs to be implemented!!!!
 
     private String brand;
     private int horsePower;
@@ -18,8 +18,8 @@ public class EvenBetterCar implements Cloneable {
     }
 
     @Override
-    public EvenBetterCar clone() {
-        try {
+    public EvenBetterCar clone() { //This is the overwritten clone() method that will also create a copy of the complex data type "engine" of the EvenBetterCarEngine.java class when it is being used.
+        try {                      //!!!!Cloneable interface needs to be implemented!!!!
             EvenBetterCar carCopy = (EvenBetterCar) super.clone();
             carCopy.engine = (EvenBetterCarEngine) carCopy.engine.clone();
             return carCopy;
