@@ -73,8 +73,8 @@ public class Main {
         System.out.println("---------------------------------------");
 
         EvenBetterCarEngine engine2 = new EvenBetterCarEngine("Diesel 1.8l");   //This example shows a "deep copy" method. This clone() method will properly create a copy of not only the base class and all its primitives, but also
-                                                                                     //all its subordinate complex types. The sub objects can then be accessed and manipulated separately without having affecting the complex types of the original car7 object.
-        EvenBetterCar car7 = new EvenBetterCar("Audi", 250, engine2);
+                                                                                     //all its subordinate complex types. The sub objects can then be accessed and manipulated separately without having it
+        EvenBetterCar car7 = new EvenBetterCar("Audi", 250, engine2); //affecting the complex data types of the original car7 object as well.
         EvenBetterCar car8 = car7.clone();
 
         System.out.println(car7);
@@ -90,9 +90,9 @@ public class Main {
 
         System.out.println("---------------------------------------");
 
-        SuperCarEngine engine3 = new SuperCarEngine("Petrol 3.0l");
-
-        SuperCar car9 = new SuperCar("Porsche", 450, engine3);
+        SuperCarEngine engine3 = new SuperCarEngine("Petrol 3.0l");      //This is the cloning variant that utilizes a constructor that is specifically set up to take an object of the same type as the one it belongs to.
+                                                                              //Then a new object is instantiated while the object of the same class that needs to be copied is handed over () to give it the very same primitive and complex attributes.
+        SuperCar car9 = new SuperCar("Porsche", 450, engine3); //The outcome is precisely the same as with a deep clone() method.
         SuperCar car10 = new SuperCar(car9);
 
         System.out.println(car9);
